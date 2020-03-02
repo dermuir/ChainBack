@@ -129,7 +129,7 @@ class CombineList extends Component {
           </FormGroup>
           <Link to={`/products/${product.id}`}>
             <div>
-              <b>{product.name || "Untitled product"}</b> &mdash; {product.description || "No description"}
+              <b>{product.name || "Producto sin titulo"}</b> &mdash; {product.description || "No descripcion"}
               <hr/>
             </div>
           </Link>
@@ -149,7 +149,7 @@ class CombineList extends Component {
           annotationContent={
             <div>
               <FontAwesomeIcon fixedWidth style={{paddingTop:"3px", marginRight:"6px"}} icon={faList}/>
-              Product selection
+              Seleccion de productos
             </div>
           }
           panelContent={
@@ -157,7 +157,7 @@ class CombineList extends Component {
               {products && products.length > 0 ? products : 
               <div>
                 Aun no se ha agregado un producto.
-                <Link style={{marginLeft: "10px"}} to="/create">Agregar producto</Link>
+                <Link style={{marginLeft: "10px"}} to="/create">Añadir producto</Link>
               </div>}
             </div>
           }
@@ -167,7 +167,7 @@ class CombineList extends Component {
           annotationContent={
             <div>
               <FontAwesomeIcon fixedWidth style={{paddingTop:"3px", marginRight:"6px"}} icon={faStar}/>
-              Combined product data
+              Combinar informacion de productos
             </div>
           }
           panelContent={
@@ -190,8 +190,8 @@ class CombineList extends Component {
               </FormGroup>
               <FormGroup>
                 <Label>
-                  Certificaciones
-                  <Link style={{marginLeft: "10px"}} to="/createcertification">Create +</Link>
+                  Certificados
+                  <Link style={{marginLeft: "10px"}} to="/createcertification">Añadir +</Link>
                 </Label>
                 <div>
                   {this.state.availableCertifications && this.state.availableCertifications.length > 0 ?
@@ -203,8 +203,8 @@ class CombineList extends Component {
                     )
                     :
                     <div style={{marginLeft:"15px"}}>
-                      No certification available.
-                      <Link style={{marginLeft: "10px"}} to="/createcertification">Create a certification</Link>
+                      No se encontraron certificados disponibles.
+                      <Link style={{marginLeft: "10px"}} to="/createcertification">Crear un certificado</Link>
                     </div>
                   }
                 </div>
@@ -221,7 +221,7 @@ class CombineList extends Component {
           }
           panelContent={
             <div>
-              <Button disabled={this.state.buttonDisabled} color="primary" onClick={this.handleCreateNewProduct}>Combine products</Button>
+              <Button disabled={this.state.buttonDisabled} color="primary" onClick={this.handleCreateNewProduct}>Combinar productos</Button>
             </div>
           }
         />

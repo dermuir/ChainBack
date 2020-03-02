@@ -95,13 +95,13 @@ class CombineScan extends Component {
                 {
                   Object.keys(this.state.productParts).map(inputKey =>
                     <FormGroup style={{display:"flex"}} key={inputKey}>
-                      Product identifier: 
+                      ID Producto:
                       <Input placeholder="0x..." style={{flex: 1}} onChange={(e) => { this.setState({ productParts: {...this.state.productParts, [inputKey]: {...this.state.productParts[inputKey], key: inputKey, value: e.target.value} }})}}/>
                     </FormGroup>
                   )
                 }
                 <Link to="#" onClick={ () => this.appendInput() }>
-                  Agrega un producto para combinar
+                  Añade un producto para combinar
                 </Link>
               </FormGroup>
             </div>
@@ -133,7 +133,7 @@ class CombineScan extends Component {
                     classNames={{input: "form-control"}}
                   />
               </FormGroup>
-              <p>Las Certificaciones e informacion personalizable puede ser modificada despues de la creacion.</p>
+              <p>Los Certificados de informacion modificable pueden ser modificados despues de la creacion.</p>
             </div>
           }
         />

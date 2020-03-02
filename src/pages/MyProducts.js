@@ -50,7 +50,7 @@ class MyProducts extends Component {
       return (
         <Link key={index} to={`/products/${product.id}`}>
           <div key={index}>
-            <b>{product.name || "Untitled product"}</b> &mdash; {product.description || "No description"}
+            <b>{product.name || "Producto sin titulo"}</b> &mdash; {product.description || "No descripcion"}
             <hr/>
           </div>
         </Link>
@@ -77,7 +77,7 @@ class MyProducts extends Component {
             <div>
               <FontAwesomeIcon fixedWidth style={{paddingTop:"3px", marginRight:"6px"}} icon={faList}/>
               Mis productos
-              <Link style={{marginLeft: "10px"}} to="/create">Create +</Link>
+              <Link style={{marginLeft: "10px"}} to="/create">Añadir +</Link>
             </div>
           }
           panelContent={
@@ -85,7 +85,7 @@ class MyProducts extends Component {
               {products && products.length > 0 ? products : 
               <div>
                 Aun no has creado un producto.
-                <Link style={{marginLeft: "10px"}} to="/create">Crear un producto</Link>
+                <Link style={{marginLeft: "10px"}} to="/create">Añadir un producto</Link>
               </div>}
             </div>
           }
