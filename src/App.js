@@ -95,14 +95,14 @@ class App extends Component {
         <Notifications/>
         <Navbar color="faded" light style={{paddingTop: "1em", paddingBottom:"2em", backgroundColor: bodyColor}} expand="md">
           <Container>
-            <Link to='/'><img alt="Logo Trace" style={{width:"130px", marginRight: "20px"}} src="/logo-black.svg"/></Link>
+            <Link to='/'><img alt="Logo ChainBack" style={{width:"130px", marginRight: "20px"}} src="/logo-black.svg"/></Link>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
                   <NavLink tag={Link} to="/account">
                     Perfil
-                    <img alt="Profile avatar" style={{marginLeft: "10px", width:"20px", height:"20px", borderRadius:"3px"}} src={blockies.createDataURL({ scale: 5, seed: this.props.web3 && this.props.passageInstance && this.props.web3Accounts ? this.props.web3Accounts[0] : ""})}/>
+                    <img alt="Avatar" style={{marginLeft: "10px", width:"20px", height:"20px", borderRadius:"3px"}} src={blockies.createDataURL({ scale: 5, seed: this.props.web3 && this.props.passageInstance && this.props.web3Accounts ? this.props.web3Accounts[0] : ""})}/>
                   </NavLink>
                 </NavItem>
               </Nav>
