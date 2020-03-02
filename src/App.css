@@ -1,6 +1,6 @@
 .btn-primary {
-  background-color: hsl(161, 42%, 52%);
-  border-color: hsl(161, 42%, 52%);
+  background-color: #51BBBE;
+  border-color: #020D1E;
 }
 
 .btn-primary.disabled, .btn-primary:disabled {
@@ -10,8 +10,8 @@
 }
 
 .btn-primary:hover{
-  background-color:  hsl(161, 42%, 42%);
-  border-color: hsl(161, 42%, 42%);
+  background-color:  #1D98F8;
+  border-color: #020D1E;
 }
 
 a {

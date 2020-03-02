@@ -140,7 +140,7 @@ class Update extends Component {
                   Agregar un campo personalizado
                 </Link>
               </FormGroup>
-              <Button disabled={this.state.updateButtonDisabled} color="primary" onClick={this.handleUpdateProduct}>Créer une nouvelle version</Button>
+              <Button disabled={this.state.updateButtonDisabled} color="primary" onClick={this.handleUpdateProduct}>Crear una nueva version </Button>
             </div>
           }
         />
