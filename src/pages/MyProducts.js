@@ -63,7 +63,7 @@ class MyProducts extends Component {
           annotationContent={
             <div>
               <FontAwesomeIcon fixedWidth style={{paddingTop:"3px", marginRight:"6px"}} icon={faSearch}/>
-              View a product
+              Ver un producto
             </div>
           }
           panelContent={
@@ -76,7 +76,7 @@ class MyProducts extends Component {
           annotationContent={
             <div>
               <FontAwesomeIcon fixedWidth style={{paddingTop:"3px", marginRight:"6px"}} icon={faList}/>
-              My products
+              Mis productos
               <Link style={{marginLeft: "10px"}} to="/create">Create +</Link>
             </div>
           }
@@ -84,8 +84,8 @@ class MyProducts extends Component {
             <div>
               {products && products.length > 0 ? products : 
               <div>
-                You did not create a product yet.
-                <Link style={{marginLeft: "10px"}} to="/create">Create a product</Link>
+                Aun no has creado un producto.
+                <Link style={{marginLeft: "10px"}} to="/create">Crear un producto</Link>
               </div>}
             </div>
           }
@@ -94,16 +94,16 @@ class MyProducts extends Component {
           annotationContent={
             <div>
               <FontAwesomeIcon fixedWidth style={{paddingTop:"3px", marginRight:"6px"}} icon={faGroup}/>
-              Combine products
+              Combinar productos
             </div>
           }
           panelContent={
             <div>
               <div>
-                <Link style={{marginLeft: "10px"}} to="/combineList">List mode</Link>
+                <Link style={{marginLeft: "10px"}} to="/combineList">Modo lista</Link>
               </div>
               <div>
-                <Link style={{marginLeft: "10px"}} to="/combineScan">QR scan mode</Link>
+                <Link style={{marginLeft: "10px"}} to="/combineScan">Escaneo de QR</Link>
               </div>
             </div>
           }
