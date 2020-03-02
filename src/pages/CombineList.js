@@ -129,7 +129,7 @@ class CombineList extends Component {
           </FormGroup>
           <Link to={`/products/${product.id}`}>
             <div>
-              <b>{product.name || "Producto sin titulo"}</b> &mdash; {product.description || "No descripcion"}
+              <b>{product.name || "Producto sin título"}</b> &mdash; {product.description || "No hay descripción"}
               <hr/>
             </div>
           </Link>
@@ -140,7 +140,7 @@ class CombineList extends Component {
     const inputProps = {
       value: this.state.address,
       onChange: this.onChange,
-      placeholder: "Geolocalizacion (lugar en mapa, latitud, lognitud)"
+      placeholder: "Geolocalización (lugar en mapa, latitud, lognitud)"
     }
 
     return (
@@ -149,14 +149,14 @@ class CombineList extends Component {
           annotationContent={
             <div>
               <FontAwesomeIcon fixedWidth style={{paddingTop:"3px", marginRight:"6px"}} icon={faList}/>
-              Seleccion de productos
+              Selección de productos
             </div>
           }
           panelContent={
             <div>
               {products && products.length > 0 ? products : 
               <div>
-                Aun no se ha agregado un producto.
+                Aun no se ha agregado un producto
                 <Link style={{marginLeft: "10px"}} to="/create">Añadir producto</Link>
               </div>}
             </div>
@@ -167,7 +167,7 @@ class CombineList extends Component {
           annotationContent={
             <div>
               <FontAwesomeIcon fixedWidth style={{paddingTop:"3px", marginRight:"6px"}} icon={faStar}/>
-              Combinar informacion de productos
+              Generar Producto
             </div>
           }
           panelContent={
@@ -177,11 +177,11 @@ class CombineList extends Component {
                   <Input placeholder="Nombre del Producto" value={this.state.name} onChange={(e) => {this.setState({name: e.target.value})}}></Input>
               </FormGroup>
               <FormGroup>
-                  <Label>Descripcion</Label>
+                  <Label>Descripción</Label>
                   <Input placeholder="Descripcion del Producto" value={this.state.description} onChange={(e) => {this.setState({description: e.target.value})}}></Input>
               </FormGroup>
               <FormGroup>
-                  <Label>Localizacion actual</Label>
+                  <Label>Localización</Label>
                   <PlacesAutocomplete
                     inputProps={inputProps}
                     onSelect={this.handleSelect}
@@ -191,7 +191,7 @@ class CombineList extends Component {
               <FormGroup>
                 <Label>
                   Certificados
-                  <Link style={{marginLeft: "10px"}} to="/createcertification">Añadir +</Link>
+                  <Link style={{marginLeft: "10px"}} to="/createcertification">+</Link>
                 </Label>
                 <div>
                   {this.state.availableCertifications && this.state.availableCertifications.length > 0 ?
@@ -203,7 +203,7 @@ class CombineList extends Component {
                     )
                     :
                     <div style={{marginLeft:"15px"}}>
-                      No se encontraron certificados disponibles.
+                      No se encontraron certificados disponibles
                       <Link style={{marginLeft: "10px"}} to="/createcertification">Crear un certificado</Link>
                     </div>
                   }
@@ -216,12 +216,12 @@ class CombineList extends Component {
           annotationContent={
             <div>
               <FontAwesomeIcon fixedWidth style={{paddingTop:"3px", marginRight:"6px"}} icon={faWrench}/>
-              Actions
+              Acciones
             </div>
           }
           panelContent={
             <div>
-              <Button disabled={this.state.buttonDisabled} color="primary" onClick={this.handleCreateNewProduct}>Combinar productos</Button>
+              <Button disabled={this.state.buttonDisabled} size="lg" block color="primary" onClick={this.handleCreateNewProduct}>Crear Producto</Button>
             </div>
           }
         />

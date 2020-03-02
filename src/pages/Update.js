@@ -103,7 +103,7 @@ class Update extends Component {
     const inputProps = {
       value: this.state.address,
       onChange: this.onChange,
-      placeholder: "Geolocalizacion (lugar en mapa, latitud, lognitud)"
+      placeholder: "Geolocalización (lugar en mapa, latitud, lognitud)"
     }
 
     return (
@@ -112,13 +112,13 @@ class Update extends Component {
           annotationContent={
             <div>
               <FontAwesomeIcon fixedWidth style={{paddingTop:"3px", marginRight:"6px"}} icon={faArrowAltCircleUp}/>
-              New information
+              Actualización de Producto
             </div>
           }
           panelContent={
             <div>
               <FormGroup>
-                  <Label>Current location</Label>
+                  <Label>Localización</Label>
                   <PlacesAutocomplete
                     inputProps={inputProps}
                     onSelect={this.handleSelect}
@@ -137,10 +137,10 @@ class Update extends Component {
                   )
                 }
                 <Link to="#" onClick={ () => this.appendInput() }>
-                  Agregar un campo personalizado
+                  Añadir dato
                 </Link>
               </FormGroup>
-              <Button disabled={this.state.updateButtonDisabled} color="primary" onClick={this.handleUpdateProduct}>Crear una nueva version </Button>
+              <Button disabled={this.state.updateButtonDisabled} color="primary" onClick={this.handleUpdateProduct}>Actualizar</Button>
             </div>
           }
         />

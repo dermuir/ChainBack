@@ -122,11 +122,11 @@ class CombineScan extends Component {
                   <Input placeholder="Nombre del Producto" value={this.state.name} onChange={(e) => {this.setState({name: e.target.value})}}></Input>
               </FormGroup>
               <FormGroup>
-                  <Label>Descripcion</Label>
+                  <Label>Descripción</Label>
                   <Input placeholder="Descripcion del producto" value={this.state.description} onChange={(e) => {this.setState({description: e.target.value})}}></Input>
               </FormGroup>
               <FormGroup>
-                  <Label>Localizacion Actual</Label>
+                  <Label>Localización</Label>
                   <PlacesAutocomplete
                     inputProps={inputProps}
                     onSelect={this.handleSelect}

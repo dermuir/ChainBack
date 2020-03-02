@@ -51,13 +51,13 @@ class Account extends Component {
           annotationContent={
             <div>
               <FontAwesomeIcon fixedWidth style={{paddingTop:"3px", marginRight:"6px"}} icon={faUser}/>
-              Informacion de la cuenta
+              Información de la cuenta
             </div>
           }
           panelContent={
             <div>
               <div>Cuenta: {this.props.web3Accounts[0]}</div>
-              <div>Chainback's: <span id="EtherBalance"></span></div>
+              <div>CBK: <span id="EtherBalance"></span></div>
             </div>
           }
         />
@@ -89,7 +89,7 @@ class Account extends Component {
                       </tr>
                     )
                     :
-                    <tr><td>Aun no se crean certificados.</td></tr>
+                    <tr><td>Aun no se crean certificados</td></tr>
                 }
                 </tbody>
               </table>

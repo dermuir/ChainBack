@@ -122,7 +122,7 @@ class View extends Component {
     const versionsList = this.state.versions.map((version, index) => {
       return (
         <li key={index}>
-          <Link to={`/products/${this.props.match.params.productId}/versions/${version.id}`}>Version {index + 1}</Link>
+          <Link to={`/products/${this.props.match.params.productId}/versions/${version.id}`}>Versión {index + 1}</Link>
         </li>
       )
     }).reverse()
@@ -189,7 +189,7 @@ class View extends Component {
           annotationContent={
             <div>
               <FontAwesomeIcon fixedWidth style={{paddingTop:"3px", marginRight:"6px"}} icon={faInfoCircle}/>
-              ID Producto
+              Datos del producto
             </div>
           }
           panelContent={
@@ -200,11 +200,11 @@ class View extends Component {
                   <td>{this.state.name}</td>
                 </tr>
                 <tr>
-                  <th scope="row">Descripcion</th>
+                  <th scope="row">Descripción</th>
                   <td>{this.state.description}</td>
                 </tr>
                 <tr>
-                  <th scope="row">Ultima actualizacion en</th>
+                  <th scope="row">Ultima actualización</th>
                   <td>{this.state.versionCreationDate}</td>
                 </tr>
                 {
@@ -225,16 +225,57 @@ class View extends Component {
           annotationContent={
             <div>
               <FontAwesomeIcon fixedWidth style={{paddingTop:"3px", marginRight:"6px"}} icon={faThumbtack}/>
-              Tracking information
+              Código de producto
             </div>
           }
           panelContent={
             <div>
-              <QRCode value={this.props.match.params.productId}/>
+              <QRCode value={this.props.match.params.productId} bgColor={"#232323"} fgColor={"#FFFFFF"} imageSettings={{height: 50 ,width: 50 }}/>
               <div>
-                ID unico del producto
+                ID único del producto
                 <pre>{this.state.id}</pre>
               </div>
+            </div>
+          }
+        />
+
+        {/* Google Maps section */}
+        <AnnotatedSection
+          annotationContent={
+            <div>
+              <FontAwesomeIcon fixedWidth style={{paddingTop:"3px", marginRight:"6px"}} icon={faMapMarker}/>
+              Localización
+            </div>
+          }
+          panelContent={
+            <div>
+              {currentLat && currentLng ? 
+                <div>
+                  <pre>{currentLat}, {currentLng}</pre>
+                  <MyMapComponent
+                    loadingElement={<div style={{ height: `100%` }} />}
+                    containerElement={<div style={{ height: `400px` }} />}
+                    mapElement={<div style={{ height: `100%` }} />}
+                  />
+                </div>
+                :
+                <p>No es posible mostrar en el mapa la localización</p>
+              }
+            </div>
+          }
+        />
+
+        {/* Certifications section */}
+        <AnnotatedSection
+          annotationContent={
+            <div>
+              <FontAwesomeIcon fixedWidth style={{paddingTop:"3px", marginRight:"6px"}} icon={faCertificate}/>
+              Certificados
+            </div>
+          }
+          panelContent={
+            <div>
+              {certificationsList && certificationsList.length > 0 ? certificationsList : "No tiene ningún certificado"}
             </div>
           }
         />
@@ -257,52 +298,11 @@ class View extends Component {
                   </Link>
                 :
                   <Link to={"/products/" + this.props.match.params.productId + "/update"}>
-                    <Button color="success">
-                      Actualizar Producto
+                    <Button size="lg" block color="primary">
+                      Actualizar producto
                     </Button>
                   </Link>
               }
-            </div>
-          }
-        />
-
-        {/* Google Maps section */}
-        <AnnotatedSection
-          annotationContent={
-            <div>
-              <FontAwesomeIcon fixedWidth style={{paddingTop:"3px", marginRight:"6px"}} icon={faMapMarker}/>
-              Localizacion
-            </div>
-          }
-          panelContent={
-            <div>
-              {currentLat && currentLng ? 
-                <div>
-                  <pre>{currentLat}, {currentLng}</pre>
-                  <MyMapComponent
-                    loadingElement={<div style={{ height: `100%` }} />}
-                    containerElement={<div style={{ height: `400px` }} />}
-                    mapElement={<div style={{ height: `100%` }} />}
-                  />
-                </div>
-                :
-                <p>Unable to display the product's location.</p>
-              }
-            </div>
-          }
-        />
-
-        {/* Certifications section */}
-        <AnnotatedSection
-          annotationContent={
-            <div>
-              <FontAwesomeIcon fixedWidth style={{paddingTop:"3px", marginRight:"6px"}} icon={faCertificate}/>
-              Certificaciones del producto
-            </div>
-          }
-          panelContent={
-            <div>
-              {certificationsList && certificationsList.length > 0 ? certificationsList : "No certification."}
             </div>
           }
         />

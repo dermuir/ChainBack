@@ -63,7 +63,7 @@ class MyProducts extends Component {
           annotationContent={
             <div>
               <FontAwesomeIcon fixedWidth style={{paddingTop:"3px", marginRight:"6px"}} icon={faSearch}/>
-              Ver un producto
+              Buscar producto
             </div>
           }
           panelContent={
@@ -76,8 +76,8 @@ class MyProducts extends Component {
           annotationContent={
             <div>
               <FontAwesomeIcon fixedWidth style={{paddingTop:"3px", marginRight:"6px"}} icon={faList}/>
-              Mis productos
-              <Link style={{marginLeft: "10px"}} to="/create">Añadir +</Link>
+              Productos
+              <Link style={{marginLeft: "10px"}} to="/create">+</Link>
             </div>
           }
           panelContent={
@@ -94,7 +94,7 @@ class MyProducts extends Component {
           annotationContent={
             <div>
               <FontAwesomeIcon fixedWidth style={{paddingTop:"3px", marginRight:"6px"}} icon={faGroup}/>
-              Combinar productos
+              Funciones
             </div>
           }
           panelContent={

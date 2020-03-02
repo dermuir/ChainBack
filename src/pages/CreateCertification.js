@@ -43,11 +43,11 @@ class CreateCertification extends Component {
           panelContent={
             <div>
               <FormGroup>
-                  <Label>Nombre del Certificado</Label>
+                  <Label>Nombre del certificado</Label>
                   <Input placeholder="Nombre" value={this.state.name} onChange={(e) => {this.setState({name: e.target.value})}}></Input>
               </FormGroup>
               <FormGroup>
-                  <Label>Direccion de la agencia certificadora</Label>
+                  <Label>Dirección de la agencia certificadora</Label>
                   <Input placeholder="0x..." value={this.state.certificationOwner} onChange={(e) => {this.setState({certificationOwner: e.target.value})}}></Input>
               </FormGroup>
               <FormGroup>

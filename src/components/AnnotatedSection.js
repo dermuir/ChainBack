@@ -10,14 +10,16 @@ class AnnotatedSection extends Component {
   render() {
 
     const annotationStyle = {
-      marginTop:"25px"
+      marginTop:"50px"
     }
 
     const panelStyle = {
-      backgroundColor: "white",
+      backgroundColor: "#232323",
+      color: "white",
       boxShadow: "0 2px 5px rgba(0,0,0,0.05)",
       padding: "30px",
-      borderRadius: "3px"
+      borderRadius: "3px",
+      marginTop:"30px"
     }
 
     const layoutStyle = {

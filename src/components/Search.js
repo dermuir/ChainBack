@@ -19,11 +19,12 @@ class Search extends Component {
     };
   }
 
+
   render() {
     return (
       <div>
         <FormGroup>
-          <Label>ID producto </Label>
+          <Label>ID del producto </Label>
           <InputGroup>
             <Input placeholder="0x..." value={this.state.productIdToView} onChange={(e) => {this.setState({productIdToView: e.target.value})}}></Input>
             <InputGroupAddon addonType="append">

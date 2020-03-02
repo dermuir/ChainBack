@@ -1,6 +1,7 @@
 .btn-primary {
   background-color: #51BBBE;
   border-color:  #51BBBE;
+  color: #FFFFFF;
 }
 
 .btn-primary.disabled, .btn-primary:disabled {
@@ -15,13 +16,39 @@
 }
 
 a {
-  color: #51BBBE;
+  color: #6EFFFF;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #51BBBE;
+  color: #1D98F8;
+  text-decoration: none;
 }
 
+p:hover{
+  color: #1D98F8;
+}
+
+div{
+  font-size: 1.4rem;
+}
+
+.col-sm-12 col-md-9{
+  background-color: #232323;
+}
+
+tr{
+  color: white
+}
+
+.form-control{
+ background-color: #272727;
+  color: white;
+}
+
+pre{
+  color: white;
+}
 /* Remove first line */
 .table.noHeaderLine > tbody > tr:first-child > td {
   border: none;

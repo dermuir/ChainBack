@@ -39,13 +39,13 @@ class UpdateGodUser extends Component {
         annotationContent={
           <div>
             <FontAwesomeIcon fixedWidth style={{paddingTop:"3px", marginRight:"6px"}} icon={faUserPlus}/>
-            Transfer administration rights
+            Transferir derechos de cuenta
           </div>
         }
         panelContent={
           <div>
             <FormGroup>
-              <Label>Nueva direccion administradora de ChainBack</Label>
+              <Label>Nueva dirección administradora de ChainBack</Label>
               <InputGroup>
                 <Input placeholder="0x..." value={this.state.newGodAddress} onChange={(e) => {this.setState({newGodAddress: e.target.value})}}></Input>
                 <InputGroupAddon addonType="append">

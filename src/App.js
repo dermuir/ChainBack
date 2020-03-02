@@ -77,7 +77,7 @@ class App extends Component {
         event.watch((error, result) => {
           if (!error){
             this.props.history.push('/');
-            notify.show("Producto creado Exitosamente.", "custom", 5000, { background: '#1D98F8', text: "#FFFFFF" });
+            notify.show("Productos cargados exitosamente", "custom", 5000, { background: '#1D98F8', text: "#FFFFFF" });
           } else {
             console.log(error);
           }
@@ -88,34 +88,35 @@ class App extends Component {
   }
 
   render() {
-    const bodyColor = "hsl(136.7, 25%, 98.1%)";
 
     const appJSX = (
-      <div style={{minHeight:"100vh", borderTop:"4px solid #1D98F8", backgroundColor: "#020D1E", fontFamily: "Barlow"}}>
+      <div style={{minHeight:"100vh", borderTop:"4px solid #1D98F8", backgroundColor: "#1D98F8", fontFamily: "Barlow"}}>
         <Notifications/>
-        <Navbar color="faded" light style={{paddingTop: "1em", paddingBottom:"2em", backgroundColor: bodyColor}} expand="md">
+        <Navbar light style={{paddingTop: "1em", paddingBottom:"1em", backgroundColor: "#272727"}} expand="md">
           <Container>
-            <Link to='/'><img alt="Logo ChainBack" style={{width:"130px", marginRight: "20px"}} src="/logo-black.svg"/></Link>
+            <Link to='/'><img alt="Logo ChainBack" style={{width:"200px", marginRight: "30px"}} src="/logo-chainback1.svg"/></Link>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <NavLink tag={Link} to="/account">
-                    Perfil
-                    <img alt="Avatar" style={{marginLeft: "10px", width:"20px", height:"20px", borderRadius:"3px"}} src={blockies.createDataURL({ scale: 5, seed: this.props.web3 && this.props.passageInstance && this.props.web3Accounts ? this.props.web3Accounts[0] : ""})}/>
+                  <NavLink tag={Link} to="/account" style={{text: "white", color:"white", fontSize: "1.3rem"}}>
+                    <p>Cuenta
+                    <img alt="Avatar" style={{marginLeft: "10px", width:"40px", height:"40px", borderRadius:"3px"}} src={blockies.createDataURL({ scale: 5, seed: this.props.web3 && this.props.passageInstance && this.props.web3Accounts ? this.props.web3Accounts[0] : ""})}/>
+                    </p>
                   </NavLink>
                 </NavItem>
               </Nav>
             </Collapse>
           </Container>
         </Navbar>
-        <div style={{backgroundColor: bodyColor, paddingBottom: "3em"}}>
-          <Container>
+        <div style={{backgroundColor: "#121212", paddingBottom: "3em", paddingtop: "3em", color:"white"}}>
+          <Container style={{backgroundColor: "#121212", paddingBottom: "3em", paddingtop: "3em", color:"white"}}>
             {this.props.children}
           </Container>
         </div>
-          <div style={{padding: "2em 0", color:"white", backgroundColor: "#020D1E"}}>
+          <div style={{padding: "0.5em 0", color:"white", backgroundColor: "#1D98F8"}}>
           <Container>
+            <img alt="Logo ChainBack" style={{width:"50px", marginRight: "50px"}} src="/favicon.svg"/>
             © 2020 ChainBack
           </Container>
         </div>
@@ -128,7 +129,7 @@ class App extends Component {
         padding: "1em"
       }}>
         Esperando conexion con ChainBack...
-      </div>      
+      </div>
     )
     return (
       <div>
