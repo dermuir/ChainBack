@@ -114,7 +114,7 @@ class App extends Component {
             {this.props.children}
           </Container>
         </div>
-        <div style={{padding: "2em 0", color:"white", backgroundColor: "#000000"}}>
+          <div style={{padding: "2em 0", color:"white", backgroundColor: "#020D1E"}}>
           <Container>
             © 2020 ChainBack
           </Container>
