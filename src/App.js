@@ -127,7 +127,7 @@ class App extends Component {
         textAlign: "center",
         padding: "1em"
       }}>
-        Waiting for web3...
+        Esperando conexion con ChainBack...
       </div>      
     )
     return (
