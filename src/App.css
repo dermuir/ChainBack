@@ -22,9 +22,6 @@ a:hover {
   color: #51BBBE;
 }
 
-div,input,button {
-  font-size: 1.3rem;
-}
 /* Remove first line */
 .table.noHeaderLine > tbody > tr:first-child > td {
   border: none;
