@@ -45,7 +45,7 @@ class App extends Component {
       })
       .catch((err) => {
         console.error(err)
-        console.log('Error finding web3.')
+        console.log('Error buscando web3 en chainback.')
       })
   }
 
@@ -101,7 +101,7 @@ class App extends Component {
               <Nav className="ml-auto" navbar>
                 <NavItem>
                   <NavLink tag={Link} to="/account">
-                    My account
+                    Perfil
                     <img alt="Profile avatar" style={{marginLeft: "10px", width:"20px", height:"20px", borderRadius:"3px"}} src={blockies.createDataURL({ scale: 5, seed: this.props.web3 && this.props.passageInstance && this.props.web3Accounts ? this.props.web3Accounts[0] : ""})}/>
                   </NavLink>
                 </NavItem>
@@ -116,7 +116,7 @@ class App extends Component {
         </div>
         <div style={{padding: "2em 0", color:"white", backgroundColor: "#000000"}}>
           <Container>
-            © 2018 Trace
+            © 2020 ChainBack
           </Container>
         </div>
       </div>
