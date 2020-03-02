@@ -91,7 +91,7 @@ class App extends Component {
     const bodyColor = "hsl(136.7, 25%, 98.1%)";
 
     const appJSX = (
-      <div style={{minHeight:"100vh", borderTop:"4px solid #1D98F8", backgroundColor: "#1D98F8", fontFamily: "Barlow"}}>
+      <div style={{minHeight:"100vh", borderTop:"4px solid #020D1E", backgroundColor: "#020D1E", fontFamily: "Barlow"}}>
         <Notifications/>
         <Navbar color="faded" light style={{paddingTop: "1em", paddingBottom:"2em", backgroundColor: bodyColor}} expand="md">
           <Container>
@@ -114,7 +114,7 @@ class App extends Component {
             {this.props.children}
           </Container>
         </div>
-          <div style={{padding: "2em 0", color:"white", backgroundColor: "#51BBBE"}}>
+          <div style={{padding: "2em 0", color:"white", backgroundColor: "#020D1E"}}>
           <Container>
             © 2020 ChainBack
           </Container>
