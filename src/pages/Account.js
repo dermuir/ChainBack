@@ -56,7 +56,7 @@ class Account extends Component {
           }
           panelContent={
             <div>
-              <div>Cuenta Chainback: {this.props.web3Accounts[0]}</div>
+              <div>Cuenta: {this.props.web3Accounts[0]}</div>
               <div>Chainback's: <span id="EtherBalance"></span></div>
             </div>
           }
@@ -65,7 +65,7 @@ class Account extends Component {
           annotationContent={
             <div>
               <FontAwesomeIcon fixedWidth style={{paddingTop:"3px", marginRight:"6px"}} icon={faCertificate}/>
-              Certificaciones
+              Certificados
             </div>
           }
           panelContent={
