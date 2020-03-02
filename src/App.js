@@ -91,7 +91,7 @@ class App extends Component {
     const bodyColor = "hsl(136.7, 25%, 98.1%)";
 
     const appJSX = (
-      <div style={{minHeight:"100vh", borderTop:"4px solid #1D98F8", backgroundColor: "black", fontFamily: "Barlow"}}>
+      <div style={{minHeight:"100vh", borderTop:"4px solid #1D98F8", backgroundColor: "#020D1E", fontFamily: "Barlow"}}>
         <Notifications/>
         <Navbar color="faded" light style={{paddingTop: "1em", paddingBottom:"2em", backgroundColor: bodyColor}} expand="md">
           <Container>
