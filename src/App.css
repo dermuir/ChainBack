@@ -15,11 +15,11 @@
 }
 
 a {
-  color: hsl(161, 42%, 52%);
+  color: #51BBBE;
 }
 
 a:hover {
-  color: hsl(161, 42%, 42%);
+  color: #51BBBE;
 }
 
 /* Remove first line */
