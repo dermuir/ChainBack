@@ -51,13 +51,13 @@ class Account extends Component {
           annotationContent={
             <div>
               <FontAwesomeIcon fixedWidth style={{paddingTop:"3px", marginRight:"6px"}} icon={faUser}/>
-              Account information
+              Informacion de la cuenta
             </div>
           }
           panelContent={
             <div>
-              <div>Ethereum address : {this.props.web3Accounts[0]}</div>
-              <div>Ether balance : <span id="EtherBalance"></span></div>
+              <div>Cuenta Chainback: {this.props.web3Accounts[0]}</div>
+              <div>Chainback's: <span id="EtherBalance"></span></div>
             </div>
           }
         />
@@ -65,7 +65,7 @@ class Account extends Component {
           annotationContent={
             <div>
               <FontAwesomeIcon fixedWidth style={{paddingTop:"3px", marginRight:"6px"}} icon={faCertificate}/>
-              Certifications
+              Certificaciones
             </div>
           }
           panelContent={
