@@ -178,7 +178,7 @@ class Create extends Component {
     const inputProps = {
       value: this.state.address,
       onChange: this.onChange,
-      placeholder: "Location (exact address, latitude & longitude, business)"
+      placeholder: "Geolocalizacion (lugar en mapa, latitud, lognitud)"
     }
 
     return (
@@ -187,21 +187,21 @@ class Create extends Component {
           annotationContent={
             <div>
               <FontAwesomeIcon fixedWidth style={{paddingTop:"3px", marginRight:"6px"}} icon={faStar}/>
-              Product information
+              Informacion del Producto
             </div>
           }
           panelContent={
             <div>
               <FormGroup>
-                  <Label>Name</Label>
-                  <Input placeholder="Product name" value={this.state.name} onChange={(e) => {this.setState({name: e.target.value})}}></Input>
+                  <Label>Nombre</Label>
+                  <Input placeholder="Nombre del producto" value={this.state.name} onChange={(e) => {this.setState({name: e.target.value})}}></Input>
               </FormGroup>
               <FormGroup>
-                  <Label>Description</Label>
-                  <Input placeholder="Product description" value={this.state.description} onChange={(e) => {this.setState({description: e.target.value})}}></Input>
+                  <Label>Descripcion</Label>
+                  <Input placeholder="Descripcion del Producto" value={this.state.description} onChange={(e) => {this.setState({description: e.target.value})}}></Input>
               </FormGroup>
               <FormGroup>
-                  <Label>Current location</Label>
+                  <Label>Localizacion actual</Label>
                   <PlacesAutocomplete
                     inputProps={inputProps}
                     onSelect={this.handleGeoSelect}
@@ -209,7 +209,7 @@ class Create extends Component {
                   />
               </FormGroup>
               <FormGroup>
-                  <Label>Categorie(s)</Label>
+                  <Label>Categorias</Label>
                   <Input defaultValue="" type="select" name="select" id="exampleSelect" onChange={(e) => this.handleCategorySelect(e, 0)}>
                     {/* This is the first category dropdown, which represents the 1st level of categories (from the root node) */}
                     <option disabled value="" key="none">(select)</option>
@@ -254,8 +254,8 @@ class Create extends Component {
                       )
                       :
                       <div style={{marginLeft:"15px"}}>
-                        No certification available.
-                        <Link style={{marginLeft: "10px"}} to="/createcertification">Create a certification</Link>
+                        No se encuentran certificados disponibles
+                        <Link style={{marginLeft: "10px"}} to="/createcertification">Crear un certificado</Link>
                       </div>
                   }
                 </div>
@@ -271,10 +271,10 @@ class Create extends Component {
                   )
                 }
                 <Link to="#" onClick={ () => this.appendInput() }>
-                  Add a custom data field
+                  Agregar un dato personalizado
                 </Link>
               </FormGroup>
-              <Button disabled={this.state.buttonDisabled} color="primary" onClick={this.handleCreateNewProduct}>Create product</Button>
+              <Button disabled={this.state.buttonDisabled} color="primary" onClick={this.handleCreateNewProduct}>Crear Producto</Button>
             </div>
           }
         />

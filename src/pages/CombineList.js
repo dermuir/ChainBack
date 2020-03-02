@@ -140,7 +140,7 @@ class CombineList extends Component {
     const inputProps = {
       value: this.state.address,
       onChange: this.onChange,
-      placeholder: "Location (exact address, latitude & longitude, business)"
+      placeholder: "Geolocalizacion (lugar en mapa, latitud, lognitud)"
     }
 
     return (
@@ -156,8 +156,8 @@ class CombineList extends Component {
             <div>
               {products && products.length > 0 ? products : 
               <div>
-                You did not add any product yet.
-                <Link style={{marginLeft: "10px"}} to="/create">Add a product</Link>
+                Aun no se ha agregado un producto.
+                <Link style={{marginLeft: "10px"}} to="/create">Agregar producto</Link>
               </div>}
             </div>
           }
@@ -173,15 +173,15 @@ class CombineList extends Component {
           panelContent={
             <div>
               <FormGroup>
-                  <Label>Name</Label>
-                  <Input placeholder="Product name" value={this.state.name} onChange={(e) => {this.setState({name: e.target.value})}}></Input>
+                  <Label>Nombre</Label>
+                  <Input placeholder="Nombre del Producto" value={this.state.name} onChange={(e) => {this.setState({name: e.target.value})}}></Input>
               </FormGroup>
               <FormGroup>
-                  <Label>Description</Label>
-                  <Input placeholder="Product description" value={this.state.description} onChange={(e) => {this.setState({description: e.target.value})}}></Input>
+                  <Label>Descripcion</Label>
+                  <Input placeholder="Descripcion del Producto" value={this.state.description} onChange={(e) => {this.setState({description: e.target.value})}}></Input>
               </FormGroup>
               <FormGroup>
-                  <Label>Current location</Label>
+                  <Label>Localizacion actual</Label>
                   <PlacesAutocomplete
                     inputProps={inputProps}
                     onSelect={this.handleSelect}
@@ -190,7 +190,7 @@ class CombineList extends Component {
               </FormGroup>
               <FormGroup>
                 <Label>
-                  Certification(s)
+                  Certificaciones
                   <Link style={{marginLeft: "10px"}} to="/createcertification">Create +</Link>
                 </Label>
                 <div>

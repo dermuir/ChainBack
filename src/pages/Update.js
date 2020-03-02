@@ -103,7 +103,7 @@ class Update extends Component {
     const inputProps = {
       value: this.state.address,
       onChange: this.onChange,
-      placeholder: "Location (exact address, latitude & longitude, business)"
+      placeholder: "Geolocalizacion (lugar en mapa, latitud, lognitud)"
     }
 
     return (
@@ -131,13 +131,13 @@ class Update extends Component {
                   // render an input with the appropriate key/value pair
                   Object.keys(this.state.customDataInputs).map(inputKey =>
                     <FormGroup style={{display:"flex"}} key={inputKey}>
-                      <Input value={this.state.customDataInputs[inputKey].key} placeholder="Property (e.g. 'color')" style={{flex: 1, marginRight:"15px"}} onChange={(e) => {this.setState({ customDataInputs: {...this.state.customDataInputs, [inputKey]: {...this.state.customDataInputs[inputKey], key: e.target.value} }})}}/>
-                      <Input value={this.state.customDataInputs[inputKey].value} placeholder="Value (e.g. 'red')" style={{flex: 1}} onChange={(e) => {this.setState({ customDataInputs: {...this.state.customDataInputs, [inputKey]: {...this.state.customDataInputs[inputKey], value: e.target.value} }})}}/>
+                      <Input value={this.state.customDataInputs[inputKey].key} placeholder="Propiedad (ej 'Tamaño')" style={{flex: 1, marginRight:"15px"}} onChange={(e) => {this.setState({ customDataInputs: {...this.state.customDataInputs, [inputKey]: {...this.state.customDataInputs[inputKey], key: e.target.value} }})}}/>
+                      <Input value={this.state.customDataInputs[inputKey].value} placeholder="Valor (ej '50 cm')" style={{flex: 1}} onChange={(e) => {this.setState({ customDataInputs: {...this.state.customDataInputs, [inputKey]: {...this.state.customDataInputs[inputKey], value: e.target.value} }})}}/>
                     </FormGroup>
                   )
                 }
                 <Link to="#" onClick={ () => this.appendInput() }>
-                  Add a custom data field
+                  Agregar un campo personalizado
                 </Link>
               </FormGroup>
               <Button disabled={this.state.updateButtonDisabled} color="primary" onClick={this.handleUpdateProduct}>Créer une nouvelle version</Button>

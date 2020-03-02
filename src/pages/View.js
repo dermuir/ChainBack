@@ -189,22 +189,22 @@ class View extends Component {
           annotationContent={
             <div>
               <FontAwesomeIcon fixedWidth style={{paddingTop:"3px", marginRight:"6px"}} icon={faInfoCircle}/>
-              Product definition
+              ID Producto
             </div>
           }
           panelContent={
             <Table>
               <tbody>
                 <tr>
-                  <th scope="row">Name</th>
+                  <th scope="row">Nombre</th>
                   <td>{this.state.name}</td>
                 </tr>
                 <tr>
-                  <th scope="row">Description</th>
+                  <th scope="row">Descripcion</th>
                   <td>{this.state.description}</td>
                 </tr>
                 <tr>
-                  <th scope="row">Last updated on</th>
+                  <th scope="row">Ultima actualizacion en</th>
                   <td>{this.state.versionCreationDate}</td>
                 </tr>
                 {
@@ -232,7 +232,7 @@ class View extends Component {
             <div>
               <QRCode value={this.props.match.params.productId}/>
               <div>
-                Unique product identifier
+                ID unico del producto
                 <pre>{this.state.id}</pre>
               </div>
             </div>
@@ -244,7 +244,7 @@ class View extends Component {
           annotationContent={
             <div>
               <FontAwesomeIcon fixedWidth style={{paddingTop:"3px", marginRight:"6px"}} icon={faWrench}/>
-              Actions
+              Acciones
             </div>
           }
           panelContent={
@@ -252,21 +252,16 @@ class View extends Component {
               { this.props.match.params.versionId && this.state.versions && this.state.versions.length > 0 && this.props.match.params.versionId.toString() !== this.state.versions.slice(-1)[0].id.toString() ?
                   <Link to={"/products/" + this.props.match.params.productId}>
                     <Button color="info">
-                      View latest version
+                      Ver la ultima version
                     </Button>
                   </Link>
                 :
                   <Link to={"/products/" + this.props.match.params.productId + "/update"}>
                     <Button color="success">
-                      Update product
+                      Actualizar Producto
                     </Button>
                   </Link>
               }
-              <Link style={{marginLeft: "10px"}} to={"/products/" + this.props.match.params.productId + "/split"}>
-                <Button color="warning">
-                  Split this product
-                </Button>
-              </Link>
             </div>
           }
         />
@@ -276,7 +271,7 @@ class View extends Component {
           annotationContent={
             <div>
               <FontAwesomeIcon fixedWidth style={{paddingTop:"3px", marginRight:"6px"}} icon={faMapMarker}/>
-              Location
+              Localizacion
             </div>
           }
           panelContent={
@@ -302,7 +297,7 @@ class View extends Component {
           annotationContent={
             <div>
               <FontAwesomeIcon fixedWidth style={{paddingTop:"3px", marginRight:"6px"}} icon={faCertificate}/>
-              Product certifications
+              Certificaciones del producto
             </div>
           }
           panelContent={
@@ -317,7 +312,7 @@ class View extends Component {
           annotationContent={
             <div>
               <FontAwesomeIcon fixedWidth style={{paddingTop:"3px", marginRight:"6px"}} icon={faHistory}/>
-              Version history
+              Historial de versiones
             </div>
           }
           panelContent={

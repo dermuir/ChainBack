@@ -89,7 +89,7 @@ class Account extends Component {
                       </tr>
                     )
                     :
-                    <tr><td>No certifications created yet.</td></tr>
+                    <tr><td>Aun no se crean certificados.</td></tr>
                 }
                 </tbody>
               </table>

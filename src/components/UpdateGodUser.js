@@ -45,11 +45,11 @@ class UpdateGodUser extends Component {
         panelContent={
           <div>
             <FormGroup>
-              <Label>New administrator's Ethereum address</Label>
+              <Label>Nueva direccion administradora de ChainBack</Label>
               <InputGroup>
                 <Input placeholder="0x..." value={this.state.newGodAddress} onChange={(e) => {this.setState({newGodAddress: e.target.value})}}></Input>
                 <InputGroupAddon addonType="append">
-                  <Button style={{borderBottomLeftRadius:"0", borderTopLeftRadius:"0"}} color="primary"  onClick={this.handleUpdateGodUser}>Update</Button>
+                  <Button style={{borderBottomLeftRadius:"0", borderTopLeftRadius:"0"}} color="primary"  onClick={this.handleUpdateGodUser}>Actualizar</Button>
                 </InputGroupAddon>
               </InputGroup>
             </FormGroup>

@@ -37,24 +37,24 @@ class CreateCertification extends Component {
           annotationContent={
             <div>
               <FontAwesomeIcon fixedWidth style={{paddingTop:"3px", marginRight:"6px"}} icon={faCertificate}/>
-              New certification
+              Nuevo Certificado
             </div>
           }
           panelContent={
             <div>
               <FormGroup>
-                  <Label>Certification name</Label>
-                  <Input placeholder="Certification name" value={this.state.name} onChange={(e) => {this.setState({name: e.target.value})}}></Input>
+                  <Label>Nombre del Certificado</Label>
+                  <Input placeholder="Nombre" value={this.state.name} onChange={(e) => {this.setState({name: e.target.value})}}></Input>
               </FormGroup>
               <FormGroup>
-                  <Label>Certification agency's address</Label>
+                  <Label>Direccion de la agencia certificadora</Label>
                   <Input placeholder="0x..." value={this.state.certificationOwner} onChange={(e) => {this.setState({certificationOwner: e.target.value})}}></Input>
               </FormGroup>
               <FormGroup>
-                  <Label>Certification image URL</Label>
+                  <Label>URL de la imagen del certificado</Label>
                   <Input placeholder="https://" value={this.state.imageUrl} onChange={(e) => {this.setState({imageUrl: e.target.value})}}></Input>
               </FormGroup>
-              <Button color="primary" onClick={this.handleCreateNewCertification}>Create certification</Button>
+              <Button color="primary" onClick={this.handleCreateNewCertification}>Crear certificado</Button>
             </div>
           }
         />
